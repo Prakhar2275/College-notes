@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.head {
+  background-color: rgb(108, 54, 54);
+  color: white;
+  word-spacing: 30px;
+  letter-spacing: 10px;
+  text-shadow: 2px 2px 4px #ffff00;
+}
