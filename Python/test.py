@@ -81,36 +81,107 @@ import re
 #     print("Invalid PAN number")
 
 # Aadhar number validation
-adhar_number = input("Enter Aadhar number: ")
-pattern_adhar = r'^\d{12}$'
+# adhar_number = input("Enter Aadhar number: ")
+# pattern_adhar = r'^\d{12}$'
 
-if re.fullmatch(pattern_adhar, adhar_number):
-    print("Valid Aadhar number")
-else:
-    print("Invalid Aadhar number")
+# if re.fullmatch(pattern_adhar, adhar_number):
+#     print("Valid Aadhar number")
+# else:
+#     print("Invalid Aadhar number")
 
 # Password validation
-password = input("Enter password: ")
-pattern_password = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$'
+# password = input("Enter password: ")
+# pattern_password = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$'
 
-if re.fullmatch(pattern_password, password):
-    print("Valid password")
-else:
-    print("Invalid password")
+# if re.fullmatch(pattern_password, password):
+#     print("Valid password")
+# else:
+#     print("Invalid password")
+
+# ===================== NESTED DICTIONARY =====================
+
+# Example 1: Simple nested dictionary
+student = {
+    "name": "John",
+    "age": 20,
+    "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "zipcode": "10001"
+    },
+    "courses": {
+        "math": 85,
+        "science": 90,
+        "english": 78
+    }
+}
+
+# Accessing nested dictionary values
+print("Student Name:", student["name"])
+print("City:", student["address"]["city"])
+print("Math Score:", student["courses"]["math"])
+
+# Example 2: Adding values to nested dictionary
+student["address"]["country"] = "USA"
+print("Updated Address:", student["address"])
+
+# Example 3: Iterating through nested dictionary
+print("\nCourses and Scores:")
+for subject, score in student["courses"].items():
+    print(f"{subject}: {score}")
+
+# Example 4: More complex nested structure
+company = {
+    "name": "Tech Corp",
+    "employees": {
+        "manager": {
+            "name": "Alice",
+            "salary": 100000,
+            "department": "IT"
+        },
+        "developer": {
+            "name": "Bob",
+            "salary": 80000,
+            "department": "IT"
+        }
+    },
+    "locations": {
+        "office1": "New York",
+        "office2": "San Francisco"
+    }
+}
+
+print("\nManager Name:", company["employees"]["manager"]["name"])
+print("Developer Salary:", company["employees"]["developer"]["salary"])
 
 
 # Program: make a list (using a for loop) of squares of even numbers
-def even_squares_upto(n):
+# def even_squares_upto(n):
     
-    result = []
-    for i in range(1, n + 1):
-        if i % 2 == 0:
-            result.append(i * i)
-    return result
+#     result = []
+#     for i in range(1, n + 1):
+#         if i % 2 == 0:
+#             result.append(i * i)
+#     return result
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
     # Example: squares of even numbers up to 10
-    n = 10
-    print("Squares of even numbers up to", n, ":", even_squares_upto(n))
+    # n = 10
+    # print("Squares of even numbers up to", n, ":", even_squares_upto(n))
 
+
+# def generate_num(n):
+#     for i in range(1,n+1):
+#         yield i
+
+# for value in generate_num(5):
+#     print(value)
+
+# subjects=["hello","guys","itss","MEhhhh","CPP"]
+# for i,v in enumerate(subjects):
+#     print(i,v)
+
+my_tuple = ("apple", "banana", "cherry")
+print(my_tuple)
+                                                                                                                        
