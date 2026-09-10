@@ -129,60 +129,71 @@ import re
 # for i,v in enumerate(subjects):
 #     print(i,v)
 
-my_tuple = ("apple", "banana", "cherry")
-print(my_tuple)
+# my_tuple = ("apple", "banana", "cherry")
+# print(my_tuple)
 
 
 # ===================== NESTED DICTIONARY =====================
 
 # Example 1: Simple nested dictionary
-student = {
-    "name": "John",
-    "age": 20,
-    "address": {
-        "street": "123 Main St",
-        "city": "New York",
-        "zipcode": "10001"
-    },
-    "courses": {
-        "math": 85,
-        "science": 90,
-        "english": 78
-    }
-}
+# student = {
+#     "name": "John",
+#     "age": 20,
+#     "address": {
+#         "street": "123 Main St",
+#         "city": "New York",
+#         "zipcode": "10001"
+#     },
+#     "courses": {
+#         "math": 85,
+#         "science": 90,
+#         "english": 78
+#     }
+# }
 
-# Accessing nested dictionary values
-print("Student Name:", student["name"])
-print("City:", student["address"]["city"])
-print("Math Score:", student["courses"]["math"])
+# # Accessing nested dictionary values
+# print("Student Name:", student["name"])
+# print("City:", student["address"]["city"])
+# print("Math Score:", student["courses"]["math"])
 
-# Example 2: Adding values to nested dictionary
-student["address"]["country"] = "USA"
-print("Updated Address:", student["address"])
+# # Example 2: Adding values to nested dictionary
+# student["address"]["country"] = "USA"
+# print("Updated Address:", student["address"])
 
-# Example 3: Iterating through nested dictionary
-print("\nCourses and Scores:")
-for subject, score in student["courses"].items():
-    print(f"{subject}: {score}")
+# # Example 3: Iterating through nested dictionary
+# print("\nCourses and Scores:")
+# for subject, score in student["courses"].items():
+#     print(f"{subject}: {score}")
 
-# ===================== DICTIONARY OF CUBES OF ODD NUMBERS (1-10) =====================
+# # ===================== DICTIONARY OF CUBES OF ODD NUMBERS (1-10) =====================
 
-# Program: Create a dictionary of cube of odd numbers in range 1-10
-cube_odd_dict = {}
+# # Program: Create a dictionary of cube of odd numbers in range 1-10
+# cube_odd_dict = {}
 
-for num in range(1, 11):
-    if num % 2 != 0:  # Check if number is odd
-        cube_odd_dict[num] = num ** 3
+# for num in range(1, 11):
+#     if num % 2 != 0:  # Check if number is odd
+#         cube_odd_dict[num] = num ** 3
 
-print("\nDictionary of cubes of odd numbers (1-10):")
-print(cube_odd_dict)
+# print("\nDictionary of cubes of odd numbers (1-10):")
+# print(cube_odd_dict)
 
-# Alternative method using dictionary comprehension
-cube_odd_dict_v2 = {num: num**3 for num in range(1, 11) if num % 2 != 0}
-print("\nUsing Dictionary Comprehension:")
-print(cube_odd_dict_v2)
+# # Alternative method using dictionary comprehension
+# cube_odd_dict_v2 = {num: num**3 for num in range(1, 11) if num % 2 != 0}
+# print("\nUsing Dictionary Comprehension:")
+# print(cube_odd_dict_v2)
 
-# Display individual cubes
-print("\nIndividual Odd Numbers and Their Cubes:")
-for num, cube in cube_odd_dict.items():
-    print(f"Cube of {num} = {cube}")                                                                                                                        
+# # Display individual cubes
+# print("\nIndividual Odd Numbers and Their Cubes:")
+
+# for num, cube in cube_odd_dict.items():
+#     print(f"Cube of {num} = {cube}")   
+
+
+
+from durgamata import add as sum
+print(sum(10,20))
+
+
+
+
+
