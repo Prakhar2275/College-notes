@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Box Color Toggle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+        }
+
+        #myBox {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* margin: 20px auto; */
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        #toggleBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>click on button ot chnage the color between light and dark.....</p>
+
+    <div id="myBox">BOX</div>
+
+    <button id="toggleBtn">Change Color</button>
+
+    <script>
+        const a = document.getElementById("myBox");
+        const b = document.getElementById("toggleBtn");
+
+        b.addEventListener("click", function () {
+            if (a.style.backgroundColor === "red") {
+                a.style.backgroundColor = "pink";
+                console.log("Color changes to pink");
+
+            } else {
+                a.style.backgroundColor = "red";
+                console.log("Color changes to red");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

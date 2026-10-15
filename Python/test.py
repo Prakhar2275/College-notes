@@ -188,12 +188,69 @@ import re
 # for num, cube in cube_odd_dict.items():
 #     print(f"Cube of {num} = {cube}")   
 
+# from durgamata import add as sum
+# print(sum(10,20))
 
 
-from durgamata import add as sum
-print(sum(10,20))
+# def fact(n):
+#     if(n==1):
+#         return 1
+#     return n*fact(n-1)
+# print(fact(4));
+
+# f=open("abc.txt","r")
+# print(f.read())
+# f.close()
+
+# f=open("abc.txt","a")
+# f.write("this is the next line")
+# f.close()
+
+# f=open("abc.txt","w")
+# list=["mannu\n","sahil\n","shivam\n","pranav\n","rohan\n","shagun\n"]
+
+# f.writelines(list)
+# print("data written successfully")
+# f.close()
+
+# TRY CATCH BLOCK STATEMENT!!!!!!!
+
+#  custom exception handeling for insuffiicient baalnce 
+
+# class insufficientBalance(Exception):
+
+#     def __init__(self,msg):
+#         print(msg)
 
 
+    
+class account:
+    def __init__(self,acc_num,acc_bal):
+        self.acc_num=acc_num
+        self.acc_bal=acc_bal
+
+    def deposit(self,amount):
+        self.acc_bal+=amount
+        
+
+    def withdraw(self,amount):
+        try: 
+            if self.acc_bal>=amount:
+                self.acc_bal-=amount
+            else:
+                raise ValueError("insufficient balance!!!")
+        except ValueError as e:
+            print(e)
+
+    # Static methodss
+# --------------------based on inilitalization this method can be tered as static or instance method----------------
+    @staticmethod
+    def m1(acc_num):
+        print(acc_num)
 
 
+a1=account(1,1000)
+a1.withdraw(10000)
 
+account.m1(123)
+a1.m1()
